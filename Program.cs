@@ -1,5 +1,5 @@
 ﻿//stp_map_task
-//вторая строка 
+//третья строка 
 string secondLine = File.ReadLines("C:\\task_1.txt").ElementAtOrDefault(2);
 Console.WriteLine(secondLine);
 
