@@ -53,8 +53,7 @@ for (int i = 0; i < amount_file_lines; i++)
         Console.WriteLine("Данные: " + data);
         Console.WriteLine("Трафик: " + traffic);
 
-
-
+        Test_txt_line.Line("IP: " + list_data[2] + " " + "Трафик: " + traffic.ToString() + " байт/с");
 
         Console.WriteLine();
         return;

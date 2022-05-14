@@ -4,7 +4,7 @@ public class Test_txt_line
 {
     public static void Line(string line)
     {
-        string path = @"c:\Users\User\OneDrive\Desktop\test.txt";
+        string path = @"c:\Users\User\OneDrive\Desktop\out.txt";
 
         try
         {
