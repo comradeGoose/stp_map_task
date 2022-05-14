@@ -21,6 +21,7 @@ for (int i = 0; i < amount_file_lines; i++)
 
     float time;
     float data;
+    float traffic;
 
     if (i == num)
     {
@@ -38,48 +39,29 @@ for (int i = 0; i < amount_file_lines; i++)
 
 
         remove_.Remove(list_data);
-        //Console.WriteLine(list_data[1]);
 
-        for (int q = 0; q < list_data.Count; q++)
-        {
-            Console.WriteLine(list_data[q]);
-        }
+        //for (int q = 0; q < list_data.Count; q++)
+        //{
+        //    Console.WriteLine(list_data[q]);
+        //}
 
-        //time = float.Parse(list_data[0], nfi);
+        time = float.Parse(list_data[0], nfi);
+        data = float.Parse(list_data[4], nfi);
+        traffic = data / time;
+        //Console.WriteLine();
+        Console.WriteLine("Время: " + time);
+        Console.WriteLine("Данные: " + data);
+        Console.WriteLine("Трафик: " + traffic);
 
-        //data = float.Parse(list_data[4], nfi);
 
-        //Console.WriteLine(time);
-        //Console.WriteLine(data);
+
 
         Console.WriteLine();
         return;
     }
 }
 
-public class remove_
-{
-    public static void Remove(List<string> list)
-    {
-        int count = 0;
-        for (int i = 0; i < list.Count; i++)
-        {
-            if (list[i] == "")
-            {
-                if(count == list.Count)
-                {
-                    return;
-                }
-                list.Remove(list[i]);
-                remove_.Remove(list);
-            }
-            else
-            {
-                count++;
-            }
-        }
-    }
-}
+
 
 
 
