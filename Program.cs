@@ -19,8 +19,17 @@ for (int i = 0; i < amount_file_lines; i++)
     {
         string secondLine = File.ReadLines(@"c:\Users\User\OneDrive\Desktop\task_1.log").ElementAtOrDefault(i - 1);
         Console.WriteLine(secondLine);
+        string newLine = "";
+        foreach(var line in secondLine)
+        {
+            if(line == ' ')
+            {
+                Test_txt_line.Line(newLine);
+                return;
+            }
+            newLine += line;
+        }
         Console.WriteLine();
-        Test_txt_line.Line(secondLine);
         return;
     }
 }
