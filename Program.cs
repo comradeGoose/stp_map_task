@@ -7,7 +7,7 @@ var nfi = new System.Globalization.NumberFormatInfo();
 nfi.NumberDecimalSeparator = ".";
 
 //количество строк файла
-int amount_file_lines = File.ReadLines(@"c:\Users\User\OneDrive\Desktop\task_1.log").Count();
+int amount_file_lines = File.ReadLines(@"c:\Users\User\OneDrive\Desktop\access.log").Count();
 Console.WriteLine("Колличество строк в файле: " + amount_file_lines);
 
 Console.WriteLine();
@@ -19,7 +19,7 @@ Console.WriteLine();
 Console.ReadLine();
 Console.WriteLine();
 
-for (int i = 0; i < 5000; i++)
+for (int i = 0; i < amount_file_lines; i++)
 {
     string IP;
     float time;
@@ -28,7 +28,7 @@ for (int i = 0; i < 5000; i++)
 
     //if (i == num)
     //{
-    string secondLine = File.ReadLines(@"c:\Users\User\OneDrive\Desktop\task_1.log").ElementAtOrDefault(i);
+    string secondLine = File.ReadLines(@"c:\Users\User\OneDrive\Desktop\access.log").ElementAtOrDefault(i);
     Console.WriteLine(secondLine);
     Console.WriteLine();
     string newLine = "";
@@ -71,7 +71,7 @@ for (int i = 0; i < 5000; i++)
     //}
 }
 
-for(int i = 0; i < 3; i++)
+for(int i = 0; i < 10; i++)
 {
     float value = dictionary.Values.Max();
     string key = dictionary.FirstOrDefault(x => x.Value == dictionary.Values.Max()).Key;
